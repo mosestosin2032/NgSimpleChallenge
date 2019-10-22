@@ -1,0 +1,15 @@
+.m-tumb{
+  background-color: #f3d5ed;
+  padding: 10px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+.movie-list-div, .search-div {
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+}
+.wrapped-images{
+  max-width:100%;
+  max-height:100%;
+}

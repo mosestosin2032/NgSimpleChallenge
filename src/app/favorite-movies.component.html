@@ -1,0 +1,25 @@
+<div style="text-align: center;padding: 20px;">
+    <a [routerLink]="['/']">Home</a> |
+    <a [routerLink]="['/favoriets']">Favorite Movies</a>
+  </div>
+
+  <div class="movie-list-div">
+    <div class="col-md-3" *ngFor="let movie of movies">
+      <div class="m-tumb">
+        <a [routerLink]="['/movies', movie.Id]">
+          <img src="{{ movie.ImageUrl }}" class="wrapped-images" />
+        </a>
+        <div class="row">
+          <div class="col-md-10">
+            <h3>
+              <b>{{ movie.Title }}</b>
+            </h3>
+          </div>
+          <!-- <div class="col-md-2" style="padding-top:7px">
+            <fa-icon [icon]="favIconEmpty" *ngIf="movie.IsFavorite"  (click)="onFavIconClicked(movie.Id)"></fa-icon>
+            <fa-icon [icon]="favIcon" *ngIf="!movie.IsFavorite"  (click)="onFavIconClicked(movie.Id)"></fa-icon>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </div>

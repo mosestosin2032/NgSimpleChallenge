@@ -1,0 +1,39 @@
+<div style="text-align: center;padding: 20px;">
+  <a [routerLink]="['/']">Home</a> |
+  <a [routerLink]="['/favoriets']">Favorite Movies</a>
+</div>
+
+  <div class="row" style="width: 50%;margin: 0 auto;">
+    <div class="col-md-4">
+      <div class="m-tumb">
+        <a [routerLink]="['/movies', movie.Id]">
+          <img src="{{ movie.ImageUrl }}" class="wrapped-images" />
+        </a>
+        <div class="row">
+          <div class="col-md-10">
+            <h3 style="text-align: center;">
+              <b>{{ movie.Title }}</b>
+            </h3>
+          </div>
+          <!-- <div class="col-md-2" style="padding-top:7px">
+            <fa-icon [icon]="favIconEmpty" *ngIf="movie.IsFavorite"  (click)="onFavIconClicked(movie.Id)"></fa-icon>
+            <fa-icon [icon]="favIcon" *ngIf="!movie.IsFavorite"  (click)="onFavIconClicked(movie.Id)"></fa-icon>
+          </div> -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+        <p><b>Title:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Title }}</p>
+        <p><b>Year:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Year }}</p>
+        <p><b>Rated:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Rated }}</p>
+        <p><b>Runtime:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Runtime }}</p>
+        <p><b>Genre:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Genre }}</p>
+        <p><b>Director:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Director }}</p>
+        <p><b>Writer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Writer }}</p>
+        <p><b>Actors:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Actors }}</p>
+
+        <p><b>Plot:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Plot }}</p>
+        <p><b>Language:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Language }}</p>
+        <p><b>Country:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b>{{ movie.Country }}</p>
+    </div>
+  </div>
